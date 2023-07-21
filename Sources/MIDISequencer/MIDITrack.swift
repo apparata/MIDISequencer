@@ -34,6 +34,11 @@ public class MIDITrack {
         add(bank: preset.bank, program: preset.program, on: channel, at: timeInBeats)
     }
     
+    /// Add "bank select" and "program change" messages to the track.
+    /// 
+    /// Note that the bank is a 14-bit number, and msb is the upper 7 bits,
+    /// and lsb is the lower 7 bits, but it seems like for SF2 sound fonts
+    /// the msb is the lower 7 bits and the lsb is the upper 7 bits, for some reason.
     @discardableResult
     public func add(bank: (msb: UInt8, lsb: UInt8) = (msb: 0, lsb: 0), program: UInt8, on channel: UInt8, at timeInBeats: MIDIBeat) -> Bool {
         
