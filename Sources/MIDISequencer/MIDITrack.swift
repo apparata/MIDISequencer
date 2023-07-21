@@ -30,6 +30,11 @@ public class MIDITrack {
     }
     
     @discardableResult
+    public func add(preset: MIDIPreset, on channel: UInt8, at timeInBeats: MIDIBeat) -> Bool {
+        add(bank: preset.bank, program: preset.program, on: channel, at: timeInBeats)
+    }
+    
+    @discardableResult
     public func add(bank: (msb: UInt8, lsb: UInt8) = (msb: 0, lsb: 0), program: UInt8, on channel: UInt8, at timeInBeats: MIDIBeat) -> Bool {
         
         var message0 = MIDIChannelMessage(status: (0xB << 4) | channel, data1: 0, data2: bank.msb, reserved: 0)
