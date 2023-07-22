@@ -1,7 +1,3 @@
-//
-//  Copyright © 2017 Apparata AB. All rights reserved.
-//
-
 import Foundation
 
 /// Note that the bank is a 14-bit number, and msb is the upper 7 bits,

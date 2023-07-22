@@ -1,7 +1,3 @@
-//
-//  Copyright © 2017 Apparata AB. All rights reserved.
-//
-
 import Foundation
 
 /// The duration of 1.0 beat = 60.0 / BPM

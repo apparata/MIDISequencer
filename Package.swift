@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.8
 
 import PackageDescription
 
@@ -6,7 +6,7 @@ let package = Package(
     name: "MIDISequencer",
     platforms: [
         // Relevant platforms.
-        .iOS(.v13), .macOS(.v10_15), .tvOS(.v13)
+        .iOS(.v15), .macOS(.v12), .tvOS(.v15)
     ],
     products: [
         .library(name: "MIDISequencer", targets: ["MIDISequencer"])
@@ -24,6 +24,5 @@ let package = Package(
                 .define("RELEASE", .when(configuration: .release)),
                 .define("SWIFT_PACKAGE")
             ]),
-        .testTarget(name: "MIDISequencerTests", dependencies: ["MIDISequencer"]),
     ]
 )

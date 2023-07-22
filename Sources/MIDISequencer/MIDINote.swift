@@ -1,7 +1,3 @@
-//
-//  Copyright © 2017 Apparata AB. All rights reserved.
-//
-
 import Foundation
 
 public struct MIDINote {
